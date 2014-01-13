@@ -26,7 +26,7 @@ _.mergeDefaults = require('merge-defaults');
 ## Why?
 
 This module is a temporary solution, until lodash has something
-similar in core that can be called as an atomic, single method.
+similar in core that can be called as a single method.
 In the mean time, this is a hack to make our code more readable.
 i.e. I know what `_.defaults` means intuitively, but I have to look
 up `_.partialRight` every time.
