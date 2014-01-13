@@ -1,6 +1,6 @@
 {
   "name": "merge-defaults",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A recursive version of _.defaults.",
   "main": "index.js",
   "scripts": {
