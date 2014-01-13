@@ -25,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/mikermcneil/merge-defaults/issues"
   },
-  "homepage": "https://github.com/mikermcneil/merge-defaults"
+  "homepage": "https://github.com/mikermcneil/merge-defaults",
+  "dependencies": {
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "should": "~2.1.1"
+  }
 }
