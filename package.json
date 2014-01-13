@@ -1,0 +1,29 @@
+{
+  "name": "merge-defaults",
+  "version": "0.0.0",
+  "description": "A recursive version of _.defaults.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikermcneil/merge-defaults.git"
+  },
+  "keywords": [
+    "lodash",
+    "_",
+    "defaults",
+    "recursive",
+    "deep",
+    "merge",
+    "underscore",
+    "_.defaults"
+  ],
+  "author": "Mike McNeil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikermcneil/merge-defaults/issues"
+  },
+  "homepage": "https://github.com/mikermcneil/merge-defaults"
+}
