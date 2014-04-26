@@ -1,6 +1,5 @@
 var should = require('should');
-var _ = require('lodash');
-_.mergeDefaults = require('../');
+var mergeDefaults = require('../');
 
 
 describe('mergeDefaults', function () {	
@@ -13,7 +12,7 @@ describe('mergeDefaults', function () {
 		beforeEach(function () {
 			X = { z: 1, a: 2 , b: 3, d: {} };
 			Y = { a: 1, b: 22 , c: 33, d: { x: 10 } };
-			result = _.mergeDefaults(X,Y);
+			result = mergeDefaults(X,Y);
 		});
 
 		it ('should return an object', function () {
@@ -78,7 +77,7 @@ describe('mergeDefaults', function () {
 					x: 10
 				}
 			};
-			result = _.mergeDefaults(X,Y);
+			result = mergeDefaults(X,Y);
 		});
 
 		it ('should return an object', function () {
