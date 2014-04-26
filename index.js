@@ -1,4 +1,6 @@
-var _ = require('lodash');
+var merge = require('lodash.merge');
+var defaults = require('lodash.defaults');
+var partialRight = require('lodash.partialright');
 
 /**
  * defaultsDeep
@@ -10,4 +12,4 @@ var _ = require('lodash');
  * worth it to use a temporary module for readability.
  * (i.e. I know what `_.defaults` means offhand- not true for `_.partialRight`)
  */
-module.exports = _.partialRight(_.merge, _.defaults);
+module.exports = partialRight(merge, defaults);
