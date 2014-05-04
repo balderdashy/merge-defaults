@@ -10,4 +10,10 @@ var _ = require('lodash');
  * worth it to use a temporary module for readability.
  * (i.e. I know what `_.defaults` means offhand- not true for `_.partialRight`)
  */
-module.exports = _.partialRight(_.merge, _.defaults);
+
+
+// Corrected: see https://github.com/lodash/lodash/issues/540
+// module.exports = _.partialRight(_.merge, _.defaults);
+module.exports = _.partialRight(_.merge, function deep(a, b) {
+  return _.merge(a, b, deep);
+});
