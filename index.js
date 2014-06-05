@@ -13,13 +13,16 @@ var _ = require('lodash');
 
 
 // Corrected: see https://github.com/lodash/lodash/issues/540
-// module.exports = _.partialRight(_.merge, _.defaults);
-module.exports = _.partialRight(_.merge, function deep(a, b) {
-  
-  // Ensure dates and arrays are not recursively merged
-  if (_.isArray(a) || _.isDate(a)) {
-    if (_.isUndefined(a)) return b;
-    else return a;
-  }
-  else return _.merge(a, b, deep);
-});
+module.exports = _.partialRight(_.merge, _.defaults);
+
+// module.exports = _.partialRight(_.merge, function () {
+//   _.defaults.apply(_, Array.prototype.slice.call(arguments));
+// });
+
+// module.exports = _.partialRight(_.merge, function deep(a, b) {
+//   // Ensure dates and arrays are not recursively merged
+//   if (_.isArray(a) || _.isDate(a)) {
+//     return a;
+//   }
+//   else return _.merge(a, b, deep);
+// });

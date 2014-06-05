@@ -32,7 +32,7 @@ describe('mergeDefaults', function() {
     it('should return an object', function() {
       assert(typeof result === 'object');
     });
-    it('should have recursively merged the sub-objects', function() {
+    it('should NOT MERGE ARRAYS in sub-objects', function() {
       assert.deepEqual(result.e, []);
     });
   });
@@ -89,7 +89,7 @@ describe('mergeDefaults', function() {
     it('should return an object', function() {
       assert(typeof result === 'object');
     });
-    it('should have recursively merged the sub-objects', function() {
+    it('should NOT MERGE ARRAYS in sub-objects', function() {
       assert.deepEqual(result.views.blueprints.someArray, ['z']);
     });
   });
