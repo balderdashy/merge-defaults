@@ -15,5 +15,11 @@ var _ = require('lodash');
 // Corrected: see https://github.com/lodash/lodash/issues/540
 // module.exports = _.partialRight(_.merge, _.defaults);
 module.exports = _.partialRight(_.merge, function deep(a, b) {
-  return _.merge(a, b, deep);
+  
+  // Ensure dates and arrays are not recursively merged
+  if (_.isArray(a) || _.isDate(a)) {
+    if (_.isUndefined(a)) return b;
+    else return a;
+  }
+  else return _.merge(a, b, deep);
 });

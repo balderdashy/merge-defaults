@@ -2,6 +2,10 @@
 
 Implements a deep version of `_.defaults`.
 
+> **Important!**
+>
+> This module DOES NOT merge arrays or dates.
+
 
 ## Installation
 
