@@ -11,6 +11,10 @@ var _ = require('lodash');
  * (i.e. I know what `_.defaults` means offhand- not true for `_.partialRight`)
  */
 
+// In case the end user decided to do `_.defaults = require('merge-defaults')`,
+// before doing anything else, let's make SURE we have a reference to the original
+// `_.defaults()` method definition.
+var origLodashDefaults = _.defaults;
 
 // Corrected: see https://github.com/lodash/lodash/issues/540
 module.exports = _.partialRight(_.merge, function () {
@@ -19,7 +23,7 @@ module.exports = _.partialRight(_.merge, function () {
   if (_.isArray(arguments[0]) || _.isDate(arguments[0])) {
     return arguments[0];
   }
-  return _.defaults.apply(_, Array.prototype.slice.call(arguments));
+  return origLodashDefaults.apply(_, Array.prototype.slice.call(arguments));
 });
 
 
