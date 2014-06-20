@@ -17,15 +17,16 @@ var _ = require('lodash');
 var origLodashDefaults = _.defaults;
 
 // Corrected: see https://github.com/lodash/lodash/issues/540
-module.exports = _.partialRight(_.merge, function () {
+module.exports = _.partialRight(_.merge, function recursiveDefaults (dest,src) {
 
   // Ensure dates and arrays are not recursively merged
   if (_.isArray(arguments[0]) || _.isDate(arguments[0])) {
     return arguments[0];
   }
-  return origLodashDefaults.apply(_, Array.prototype.slice.call(arguments));
+  return _.merge(dest, src, recursiveDefaults);
 });
 
+//origLodashDefaults.apply(_, Array.prototype.slice.call(arguments));
 
 // module.exports = _.partialRight(_.merge, _.defaults);
 
