@@ -1,0 +1,19 @@
+{
+  "name": "merge-defaults",
+  "main": "index.js",
+  "version": "0.2.1",
+  "homepage": "https://github.com/mikermcneil/merge-defaults",
+  "authors": ["Mike McNeil"],
+  "description": "Implements a deep version of lodash `_.defaults`",
+  "keywords": [
+    "lodash",
+    "_",
+    "defaults",
+    "recursive",
+    "deep",
+    "merge",
+    "underscore",
+    "_.defaults"
+  ],
+  "license": "MIT"
+}
