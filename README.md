@@ -1,3 +1,5 @@
+## Note: Lodash now includes a [`defaultsDeep`](https://lodash.com/docs/4.17.10#defaultsDeep) function.
+
 # merge-defaults
 
 Implements a deep version of `_.defaults`.
