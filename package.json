@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/mikermcneil/merge-defaults",
   "dependencies": {
-    "lodash": "~2.4.1"
+    "@sailshq/lodash": "^3.10.2"
   },
   "devDependencies": {
     "should": "~2.1.1",
